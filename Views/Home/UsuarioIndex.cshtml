@@ -1,0 +1,35 @@
+﻿@{
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+    ViewData["Title"] = "Panel de Usuario";
+}
+
+<div class="jumbotron text-center bg-light">
+    <h1 class="display-4">Bienvenido al Sistema de Gestión del Hotel</h1>
+    <p class="lead">Gestiona tus reservas y perfil de manera eficiente.</p>
+    <hr class="my-4">
+    <p>Utiliza los enlaces a continuación para navegar por el sistema.</p>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Reservas</h5>
+                    <p class="card-text">Gestiona todas tus reservas.</p>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="/Reservas/Index" class="btn btn-outline-primary btn-block">Ir a la Gestión de Reservas</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Perfil</h5>
+                    <p class="card-text">Ver y actualizar tu perfil.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="jumbotron text-center bg-light">
+    <h1 class="display-4">Bienvenido al Sistema de Gestión del Hotel</h1>
+    <p class="lead">Gestiona tus reservas, usuarios y habitaciones de manera eficiente.</p>
+    <hr class="my-4">
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Reservas</h5>
+                    <p class="card-text">Gestiona todas las reservas de los clientes.</p>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="/Reservas/Index" class="btn btn-outline-primary btn-block">Ir a la Gestión de Reservas</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Usuarios</h5>
+                    <p class="card-text">Gestiona los usuarios del sistema.</p>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="/Usuarios/Index" class="btn btn-outline-primary btn-block">Ir a la Gestión de Usuarios</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Habitaciones</h5>
+                    <p class="card-text">Gestiona las habitaciones del hotel.</p>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="/Habitaciones/Index" class="btn btn-outline-primary btn-block">Ir a la Gestión de Habitaciones</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Clima Actual</h5>
+                    @if (ViewBag.Icon != null)
+                    {
+                        <div class="weather-icon mb-3">
+                            <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="Weather Icon" />
+                        </div>
+                    }
+                    <p class="card-text">Temperatura: <strong>@ViewBag.Temperature °C</strong></p>
+                    <p class="card-text">Condición: <strong>@ViewBag.Weather</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
